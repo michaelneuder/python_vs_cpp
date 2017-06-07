@@ -5,7 +5,7 @@ import numpy as np
 import time
 
 def main():
-	input_number = np.arange(1,101,1)
+	input_number = np.arange(1,1001,1)
 	rng_data = []
 	decomp_data = []
 	for i in input_number:

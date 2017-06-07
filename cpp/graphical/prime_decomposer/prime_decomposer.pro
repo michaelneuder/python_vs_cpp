@@ -13,8 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        window.cpp
+        window.cpp \
+    prime_factors.cpp
 
-HEADERS  += window.h
+HEADERS  += window.h \
+    prime_factors.h
 
 FORMS    += window.ui
+
+#CONFIG   += c++11
+QMAKE_CXXFLAGS += -std=c++11
