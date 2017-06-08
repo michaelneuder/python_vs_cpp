@@ -1,0 +1,18 @@
+﻿repeat with n=1000 to 1000000 step 1000
+	TypeText <<./random_integer_generator.py>>
+	TypeText Return
+	TypeText n
+	TypeText Return
+	wait until ImageFound( "two_lines")
+	TypeText "./main.py"
+	TypeText Return
+	Click "upload_button"
+	DoubleClick "rand_ints"
+	Wait until ImageFound("run_time")
+	Click "exit_button"
+	TypeText "clear" & Return 
+end repeat	
+
+
+
+

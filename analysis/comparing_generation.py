@@ -13,8 +13,12 @@ def main():
 
     x_plot_python = np.asarray(python_data['number of input'], dtype=np.float64)
     x_plot_cpp = np.asarray(cpp_data['number of input'], dtype=np.float64)
-    plt.plot(x_plot_python, python_plot, 'g')
-    plt.plot(x_plot_cpp, cpp_plot, 'r')
+    plt.title("random number generation")
+    plt.xlabel("number of input")
+    plt.ylabel("runtime (ms)")
+    plt.plot(x_plot_python, python_plot, 'g', label='python')
+    plt.plot(x_plot_cpp, cpp_plot, 'r', label='cpp')
+    plt.legend()
     plt.show()
 
     quotient = np.asarray([python_plot[i]/cpp_plot[i] for i in range(len(python_plot))])
