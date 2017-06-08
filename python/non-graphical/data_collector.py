@@ -23,12 +23,12 @@ def main():
 		decomp_data.append((end_time-start_time)*1000)
 		print("---------------------------\n")
 
-	with open("data/rng_data.csv", 'w') as WRITE_FILE:
+	with open("data/rng_data_mod.csv", 'w') as WRITE_FILE:
 		for i in input_number:
 			WRITE_FILE.write(str(i) + ", " + str(rng_data[i-1]) + "\n")
 	WRITE_FILE.close()
 
-	with open("data/decomp_data.csv", 'w') as WRITE_FILE:
+	with open("data/decomp_data_mod.csv", 'w') as WRITE_FILE:
 		for i in input_number:
 			WRITE_FILE.write(str(i) + ", " + str(decomp_data[i-1]) + "\n")
 	WRITE_FILE.close()
