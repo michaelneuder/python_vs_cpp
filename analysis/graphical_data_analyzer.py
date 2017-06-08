@@ -18,7 +18,7 @@ def main():
 	plt.plot(num_input_plot, cpp_time_plot, 'r')
 	plt.show()
 	quotient =  np.asarray([py_time_plot[i]/cpp_time_plot[i] for i in range(len(py_time_plot))])
-	print("pyqt is on average", quotient.mean(), "times slower than qt for c++.")
+	print("pyqt is on average {} times slower than qt for c++.".format(quotient.mean()))
 
 if __name__ == '__main__':
 	main()
