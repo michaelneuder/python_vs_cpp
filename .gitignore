@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#c++ qt creator files
+build-prime_decomposer-Desktop-Debug/
