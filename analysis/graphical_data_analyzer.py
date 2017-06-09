@@ -14,8 +14,12 @@ def main():
 
 	num_input_plot = np.asarray(python_data['number of input'], dtype=np.float64)
 
-	plt.plot(num_input_plot, py_time_plot, 'g')
-	plt.plot(num_input_plot, cpp_time_plot, 'r')
+	plt.plot(num_input_plot, py_time_plot, 'g', label='python')
+	plt.plot(num_input_plot, cpp_time_plot, 'r', label='cpp')
+	plt.title("computation and list population")
+	plt.xlabel("number of input")
+	plt.ylabel("runtime (ms)")
+	plt.legend(loc=2)
 	plt.show()
 	quotient =  np.asarray([py_time_plot[i]/cpp_time_plot[i] for i in range(len(py_time_plot))])
 	print("pyqt is on average {} times slower than qt for c++.".format(quotient.mean()))
